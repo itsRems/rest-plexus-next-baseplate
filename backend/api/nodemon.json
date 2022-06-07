@@ -1,0 +1,7 @@
+{
+	"watch": ["src", "../control/src/**"],
+	"ext": ".ts",
+	"ignore": [],
+	"exec": "npx kill-port 1500 && ts-node ./src/app.ts",
+	"delay": 3500
+}

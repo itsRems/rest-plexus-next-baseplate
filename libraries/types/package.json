@@ -1,0 +1,9 @@
+{
+	"name": "@bp/types",
+	"version": "1.0.0",
+	"private": true,
+	"types": "./src/index.d.ts",
+	"dependencies": {
+		"prisma": "^3.15.0"
+	}
+}

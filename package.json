@@ -1,0 +1,26 @@
+{
+	"name": "easy-baseplate",
+	"version": "1.0.0",
+	"repository": "git@github.com:itsRems/rest-plexus-next-baseplate",
+	"author": "Nico <contact@itsrems.com>, Jack <contact@jackgamesftw.xyz>",
+	"private": true,
+	"scripts": {
+		"api": "yarn workspace @bp/api",
+		"core": "yarn workspace @bp/core",
+		"control": "yarn workspace @bp/control",
+		"dev:backend": "concurrently \"yarn api dev\" \"yarn realtime dev\"",
+		"dev:docker": "docker-compose -p nyx-dev -f docker-compose.dev.yml up",
+		"web": "yarn workspace @bp/web"
+	},
+	"workspaces": {
+		"packages": [
+			"backend/*",
+			"frontend/*",
+			"libraries/*"
+		]
+	},
+	"devDependencies": {
+		"concurrently": "^7.2.1",
+		"typescript": "^4.7.3"
+	}
+}
