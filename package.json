@@ -8,7 +8,7 @@
 		"api": "yarn workspace @bp/api",
 		"core": "yarn workspace @bp/core",
 		"control": "yarn workspace @bp/control",
-		"dev": "concurrently \"yarn api dev\" \"yarn web dev\"",
+		"dev": "yarn && yarn control generate && concurrently \"yarn api dev\" \"yarn web dev\"",
 		"dev:backend": "concurrently \"yarn api dev\"",
 		"dev:docker": "docker-compose -p exampleApp -f docker-compose.dev.yml up",
 		"web": "yarn workspace @bp/web"

@@ -83,5 +83,5 @@ export async function updateUser(
 		},
 		data,
 	});
-	return utils.userToBpUser(u);
+	return utils.cleanUser(u);
 }
