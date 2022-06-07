@@ -12,12 +12,16 @@
 		"@prisma/client": "^3.15.0",
 		"@rocketplay/cache": "^1.2.0",
 		"@rocketplay/extractenv": "^1.0.3",
+		"async-exit-hook": "^2.0.1",
 		"bcrypt": "^5.0.1",
+		"discord-oauth2": "^2.10.0",
+		"firebase-admin": "^10.2.0",
 		"jsonwebtoken": "^8.5.1",
 		"nanoid": "^3.3.4",
 		"prisma-exclude": "^1.0.2"
 	},
 	"devDependencies": {
+		"@types/async-exit-hook": "^2.0.0",
 		"@types/bcrypt": "^5.0.0",
 		"@types/jsonwebtoken": "^8.5.8",
 		"@types/node": "^17.0.41",

@@ -10,6 +10,7 @@ async function StartApi() {
 	initCache({
 		prefix: `bp`,
 	});
+	control.oauth.firebase.init();
 	// API Server
 	await startServer(1500);
 	console.log(`[@BP/API] Web server up and running on port 1500`);

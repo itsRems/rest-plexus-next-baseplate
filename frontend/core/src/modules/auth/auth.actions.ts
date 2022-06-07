@@ -1,7 +1,9 @@
 import { AuthBody } from '@bp/types';
 import { action, preaction } from '@plexusjs/core';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import toast from 'react-hot-toast';
 import { api, users } from '..';
+import { firebaseAuth } from './auth.firebase';
 import * as routes from './auth.routes';
 import { AuthState } from './auth.state';
 
@@ -46,6 +48,31 @@ export const passwordLogin = action(
 		}
 	}
 );
+
+/**
+ * Oauth
+ */
+
+
+export const firebaseLogin = action(async (_, platform: 'google') => {
+	let provider;
+
+	switch (platform) {
+		case 'google':
+			provider = new GoogleAuthProvider();
+			provider.setCustomParameters({
+				prompt: 'select_account'
+			});
+			break;
+	
+		default:
+			throw 'no provider';
+	}
+
+	const res = await signInWithPopup(firebaseAuth, provider);
+
+	console.log(res);
+})
 
 export function handleAuthData(data: AuthBody) {
 	users.collection.collect(data.user, 'myAccounts');

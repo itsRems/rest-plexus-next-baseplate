@@ -11,6 +11,7 @@
 	"dependencies": {
 		"@bp/types": "1.0.0",
 		"@plexusjs/core": "^1.1.0",
+		"firebase": "^9.8.2",
 		"react-hot-toast": "^2.2.0"
 	},
 	"devDependencies": {

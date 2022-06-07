@@ -1,5 +1,5 @@
 {
-	"watch": ["src", "../control/src/**"],
+	"watch": ["src", "../control/src/**", "../../libraries/types/src/**"],
 	"ext": ".ts",
 	"ignore": [],
 	"exec": "npx kill-port 1500 && ts-node ./src/app.ts",
