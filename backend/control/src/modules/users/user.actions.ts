@@ -83,5 +83,5 @@ export async function updateUser(
 		},
 		data,
 	});
-	return utils.userToNyxUser(u);
+	return utils.userToBpUser(u);
 }

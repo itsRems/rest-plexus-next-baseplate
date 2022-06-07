@@ -9,7 +9,7 @@
 		"core": "yarn workspace @bp/core",
 		"control": "yarn workspace @bp/control",
 		"dev:backend": "concurrently \"yarn api dev\" \"yarn realtime dev\"",
-		"dev:docker": "docker-compose -p nyx-dev -f docker-compose.dev.yml up",
+		"dev:docker": "docker-compose -p bp-dev -f docker-compose.dev.yml up",
 		"web": "yarn workspace @bp/web"
 	},
 	"workspaces": {

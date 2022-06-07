@@ -1,7 +1,7 @@
-import { NyxUser } from '@nyx/types';
+import { BpUser } from '@bp/types';
 import { User } from '@prisma/client';
 
-export function userToNyxUser(user: User): NyxUser {
+export function userToBpUser(user: User): BpUser {
 	return {
 		id: user.id,
 		username: user.username,
