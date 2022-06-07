@@ -3,7 +3,7 @@ import fastifyCors from '@fastify/cors';
 import { registerRoutes } from './loader';
 
 const server = fastify({
-	logger: false /** process.env.NODE_ENV !== "production" */,
+	logger: false,
 	bodyLimit: 1048576 * 50,
 });
 
