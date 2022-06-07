@@ -1,10 +1,10 @@
 import control from '@bp/control';
-import { User } from '@prisma/client';
+import { BpUser } from '@bp/types';
 import { FastifyRequest } from 'fastify';
 
 const BearerRXP = /[Bb]earer/g;
 
-export async function loggedIn(req: FastifyRequest): Promise<User | false> {
+export async function loggedIn(req: FastifyRequest): Promise<BpUser | false> {
 	try {
 		const authToken = req.headers['authorization'];
 		if (!authToken) return false;
