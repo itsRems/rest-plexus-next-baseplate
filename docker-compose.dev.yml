@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: exampleApp
+      POSTGRES_USER: exampleApp
+      POSTGRES_PASSWORD: exampleApp
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: redis:5
+    ports:
+      - '6379:6379'
